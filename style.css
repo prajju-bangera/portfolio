@@ -1,0 +1,16 @@
+body{
+    background-color: #d3c2c2;
+}
+
+header{
+    text-align: center;
+}
+.my{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+button{
+    color: black;
+    background-color: aqua;
+}
