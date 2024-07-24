@@ -5,17 +5,20 @@
 }
 body{
     width: 100%;
-     background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(black2.png);  
+    overflow-x: hidden;
+    background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(black2.png);  
 }
 
 /* for header contents */
 header
 {
     display: flex;
-    width: 55%;
+    width: 100%;
     justify-content: space-between;
-    margin-left: 50px
-
+    z-index:10;
+    background-color: black;
+    position:sticky;
+    top: 0;
 }
 
 
@@ -28,6 +31,10 @@ header
     float: left;
     margin-left:2px;
     margin-top: 20px;
+    position:sticky;
+    top: 0;
+    
+    
 
     
 /* about menu */
@@ -38,19 +45,25 @@ header
     height: 7px;
     margin-top: 10px;
     margin-left: 240px;
+    position:sticky;
+    top: 0;
+    
 }
 ul{
     float: left;
     display: flex;
     justify-content: center;
     align-items: center;
+    position:sticky;
+    top: 0;
 }
 ul li{
     list-style: none;
     margin-left: 62px;
     margin-top: 27px;
     font-size: 14PX;
-   
+    position:sticky;
+    top: 0;
     
     
 }
@@ -60,9 +73,6 @@ ul li a{
     font-family: Arial;
     font-weight: bold;
     transition: 0.4s ease-in-out;
-    border-bottom: white;
-    border-width: 0;
-    
 }
 ul li a:hover{
     color: #ff7200;
@@ -112,12 +122,54 @@ ul li a:hover{
 }
 .resume a{
     margin-left: 400px;
-    margin-top: 40px;
+    margin-top: 27px;
+    padding: 1px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 20px;
+
+    
+}
+
+
+.resume a i{
+    margin-left: 2px;
+    width: 50px;
+    text-align:center;
+}
+
+.resume .btnn{
+    color: #060303;
+    background-color:#f02727;
+    font-weight: bold;
+    padding:3px 15px; 
+    font-size: 15px;
+    margin-left: 310px;
+    margin-top: 20px;
+}
+
+.resume:hover{
+    color: #ffffff;
+}
+
+/* .resume .btnn:hover{
+    color: #ffffff;
+}
+.resume .btnn i:hover{
+    color: #ffffff;
+} */
+
+.resume .btnn  i{
+    color: #060303;
+    /* padding: 10px 20px;  */
 }
 a{
     text-decoration: none;
     color: #ffffff;
     margin-top: 50px;
+    
+   
+    
    
 }
 
@@ -127,7 +179,7 @@ a{
 }
 a:hover
 {
-    color: #ff7200;
+    color: #f8f2ec;
     height: 30px;
     border-width: 10px;
 
@@ -216,7 +268,11 @@ a:hover
     margin-right: 2086px;
     margin-top: -400px;
 }
-
+.hd{
+    background-color: black;
+    position:sticky;
+    top: 0;
+}
 
 
 .abt h1{
@@ -243,16 +299,20 @@ a:hover
     margin-left: -80px;
 }
 
-    .footercontainer .sub p{
-        color: #f02727;
-        /* margin-left: -1150px; */
-    }
+.socialicons a i:hover{
+    color: #cd4343;
+}
+
+.footercontainer .sub p{
+    color: #f02727;
+    /* margin-left: -1150px; */
+}
 
 
-    .footercontainer .socialicons a i{
-        margin-left: 2px;
-        width: 50px;
-    }
+.footercontainer .socialicons a i{
+    margin-left: 2px;
+    width: 80px;
+}
 
     
 .sub{
@@ -260,4 +320,88 @@ a:hover
     margin-top: -115px;
     line-height: 23px;
     margin-left: 2px;
+}
+
+.work h2{
+    color: #ffffff;
+}
+
+
+
+
+.work{
+    /* position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+     width: 90vw; 
+    display: grid;
+     grid-template-columns: repeat(auto-fil); 
+    column-gap: 20px;
+    row-gap: 100px;
+    scroll-behavior: smooth;
+    scrollbar-width: 10px; */
+
+    margin-top: 950px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+position: relative;
+}
+
+.work img{
+    max-width: 150px;
+    max-height: 150px;
+    margin: 2px;
+
+}
+
+.work img:hover{
+    cursor: pointer;
+    filter: brightness(50%);
+}
+
+img{
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+   
+}
+
+
+#FullImageView{
+    margin-inline:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color:rgba(0,0,0,.9) */
+}
+
+
+#FullImage{
+    padding: 25px;
+    max-width: 98%;
+    max-height: 98%;
+}
+
+#CloseButton{
+    position: absolute;
+    top: 12px;
+    right: 500px;
+    font-size: 2rem;
+    color: #f8f2ec;
+    cursor: pointer;
+}
+
+
+.certificate-list{
+    width: 95vw;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    overflow: scroll;
 }
