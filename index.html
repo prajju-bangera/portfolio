@@ -7,66 +7,72 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Prajwal</title>
         <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <!-- menu buttons -->
-        <header class="hd">
+        <header>
             <div class="mp">MyPortfolio</div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="#work">DESIGN</a></li>
-                </ul>
-            </div>
+            <nav class="menu">
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#contact">CONTACT</a>
+                <a href="#work">DESIGN</a>
+            </nav>
 
         <!-- resume -->
             <a href="./Praj resume new.pdf" download class="resume">
                 <!-- <a href="#"><img src="getintouch.svg" height="30px" width="30px" alt=""></a> -->
                 <!-- <a href="Praj resume new.pdf"><i class="fa fa-download" height="30px" width="30px" alt=""></i>Resume</a> -->
-                <button  class="btnn"><i class="fa fa-download"></i>Resume</button>
+                <i class="fa fa-download"></i>
+                <span>Resume</span>
             </a> 
         </header>  
 
         <!-- about content includes logo -->
-        <div class="name" id="home">
-            <h3>Hello My Name is, <br></h3>
-            <h1>PRAJWAL</h1>
+        <section class="Hero" id="home">
+            <div class="Hero-left">
+                <h3>Hello My Name is, <br></h3>
+                <h1>PRAJWAL</h1>
 
-            <div class="footercontainer">
-                <div class="socialicons">
-                    <a href=""><i class="fa fa-envelope"></i></a>
-                    <a href="https://www.instagram.com/im_prajju_bangera/?locale=zh_CN"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/prajwal-m-p-15bb9b285/"><i class="fa-brands fa-linkedin"></i></a>
-                    <!-- <a href=""><i class="fa-brands fa-clock"></i></a> -->
-                </div>  
+                <div class="footercontainer">
+                    <div class="socialicons">
+                        <a href=""><i class="fa fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/im_prajju_bangera/?locale=zh_CN"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/prajwal-m-p-15bb9b285/"><i class="fa-brands fa-linkedin"></i></a>
+                        <!-- <a href=""><i class="fa-brands fa-clock"></i></a> -->
+                    </div>  
+                </div>
+                <div class="sub">
+                    <h5><p>Iam a passionate front-end developer with expertise in HTML, CSS, and JavaScript. <br>I love creating beautiful, responsive, and user-friendly websites.</p></h5>
+                </div> 
             </div>
 
-            <div class="sub">
-                <h5><p>Iam a passionate front-end developer with expertise in HTML, CSS, and JavaScript. <br>I love creating beautiful, responsive, and user-friendly websites.</p></h5>
-            </div> 
-        </div>
+            <div class="Hero-right">
+                <div class="outer-circle circle">
+                    <!-- <img class="imge" src="https://i.postimg.cc/ydBP0QMQ/me.jpg" alt="hover"> -->
+                    <img class="imge" src="./me.webp" alt="My_Profile_Pic">
+                </div>
+            </div>
+        </section>
         
     <!-- PROFILE IMAGE -->
-        <div class="container">
-            <div class="outer-circle circle">
-                <img class="imge" src="https://i.postimg.cc/ydBP0QMQ/me.jpg" alt="hover">
-            </div>
-        </div>
         
-        <div class="abt" id="about">
+        <section class="abt" id="about">
             <h1> About Me>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></h1>
             <div>
                 <h2></h2>
             </div>
-        </div>
+        </section>
         
-        <div class="work" id="work">
+        <section class="work" id="work">
             <h2>MY CERTIFICATE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></h2>
            
-            <div id="FullImageView">
+            <div id="FullImageView" style="display: none;">
                 <img id="FullImage">
                 <span id="CloseButton" onclick="CloseFullView()">&times;</span>
             </div>
@@ -86,7 +92,7 @@
             <script type="text/JavaScript">  
                 function FullView(ImgLink) {
                     document.getElementById("FullImage").src=ImgLink;
-                    document.getElementById("FullImageView").style.display="block";
+                    document.getElementById("FullImageView").style.display="flex";
                 }
                 function CloseFullView() {
                     document.getElementById("FullImageView").style.display="none";
@@ -94,11 +100,11 @@
                 }
                 
             </script>
-        </div>
+        </section>
         
-        <div class="cont" id="contact">
+        <section class="cont" id="contact">
             <h1> Contact>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></h1>
-        </div>
+        </section>
         
         <div class="main">
             <div class="navbar">    
